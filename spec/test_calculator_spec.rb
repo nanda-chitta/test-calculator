@@ -3,8 +3,6 @@
 require 'config/support'
 
 RSpec.describe TestCalculator, type: :module do
-  subject { TestCalculator }
-
   describe 'test_calculate' do
     it 'return should defined' do
       expect(defined?(TestCalculator)).to eq('constant')
@@ -13,7 +11,7 @@ RSpec.describe TestCalculator, type: :module do
 
   describe '#add' do
     it 'should respond_to method' do
-      expect(subject.respond_to?(:add)).to eq(true)
+      expect(TestCalculator.respond_to?(:add)).to eq(true)
     end
 
     it 'return for valid string' do
@@ -56,12 +54,12 @@ RSpec.describe TestCalculator, type: :module do
 
     context 'when many numbers' do
       it 'return the sum of many numbers' do
-        expect((["15"]*50).join(',').add).to eq(750)
+        expect((['15'] * 50).join(',').add).to eq(750)
       end
     end
 
     context 'when newlines as delimiters' do
-      it 'return sum of the number'do
+      it 'return sum of the number' do
         expect("150\n10".add).to eq(160)
       end
 
