@@ -24,6 +24,14 @@ RSpec.describe TestCalculator, type: :module do
       it 'return the "digit" which provided' do
         expect('8'.add).to eq(8)
       end
+
+      it 'return error for other single digit number string' do
+        expect('5'.add).to eq(5)
+      end
+
+      it 'return error for other any digit number string' do
+        expect('30'.add).to eq(30)
+      end
     end
   end
 end
