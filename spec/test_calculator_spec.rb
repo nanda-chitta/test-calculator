@@ -82,7 +82,7 @@ RSpec.describe TestCalculator, type: :module do
 
     context 'when negative numbers' do
       it 'should raise an exception for negative number' do
-        expect('-124'.add).to raise_error
+        expect { '-124'.add }.to raise_error
       end
     end
   end
