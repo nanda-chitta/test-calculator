@@ -59,5 +59,11 @@ RSpec.describe TestCalculator, type: :module do
         expect((["15"]*50).join(',').add).to eq(750)
       end
     end
+
+    context 'when newlines as delimiters' do
+      it 'return sum of the number'do
+        expect("150\n10".add).to eq(160)
+      end
+    end
   end
 end
