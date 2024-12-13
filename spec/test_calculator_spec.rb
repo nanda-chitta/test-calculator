@@ -44,13 +44,19 @@ RSpec.describe TestCalculator, type: :module do
       end
     end
 
-    context 'when multiple numbers' do
+    context 'when three digit numbers' do
       it 'return the sum of the numbers input' do
         expect('12,10,16'.add).to eq(38)
       end
 
       it 'return the sum of the 3 digit numbers' do
         expect('300,250,725'.add).to eq(1275)
+      end
+    end
+
+    context 'when many numbers' do
+      it 'return the sum of many numbers' do
+        expect((["15"]*50).join(',').add).to eq(750)
       end
     end
   end
