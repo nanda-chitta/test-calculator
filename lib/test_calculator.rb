@@ -1,4 +1,6 @@
 module TestCalculator
 
-  def add; end
+  def add
+    0
+  end
 end
