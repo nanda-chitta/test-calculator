@@ -7,7 +7,11 @@ module TestCalculator
   end
 
   def raise_error_for_negative_number
-    raise if include?('-')
+    raise "Negative numbers not allowed: #{negative_nums.join(', ')}" if negative_nums.any?
+  end
+
+  def negative_nums
+    num.select { |n| n < 0 }
   end
 
   def num

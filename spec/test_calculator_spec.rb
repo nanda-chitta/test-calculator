@@ -86,7 +86,7 @@ RSpec.describe TestCalculator, type: :module do
       end
 
       it 'should raise an exception with message for negative number' do
-        expect { '10abdbvb-babd10djbvfhvg-2bjdsbj-5'.add }.to raise_error('negative numbers not allowed: -2, -5')
+        expect { '10abdbvb-babd10djbvfhvg-2bjdsbj-5'.add }.to raise_error('Negative numbers not allowed: -2, -5')
       end
     end
   end
