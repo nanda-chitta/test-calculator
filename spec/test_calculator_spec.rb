@@ -20,8 +20,8 @@ RSpec.describe TestCalculator, type: :module do
       expect(''.add).to eq(0)
     end
 
-    context 'when single digit' do
-      it 'return the "digit" which provided' do
+    context 'when single number' do
+      it 'return the "number" which provided' do
         expect('8'.add).to eq(8)
       end
 
@@ -31,6 +31,12 @@ RSpec.describe TestCalculator, type: :module do
 
       it 'return error for other any digit number string' do
         expect('30'.add).to eq(30)
+      end
+    end
+
+    context 'when two numbers' do
+      it 'return the sum of two number' do
+        expect('5,8'.add).to eq(13)
       end
     end
   end
