@@ -74,6 +74,10 @@ RSpec.describe TestCalculator, type: :module do
       it 'should allow the semicolon' do
         expect("//;\n19;12;14".add).to eq(45)
       end
+
+      it 'should allow the letter' do
+        expect("//abc\n52$32@18%14".add).to eq(116)
+      end
     end
   end
 end
