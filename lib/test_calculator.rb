@@ -6,6 +6,6 @@ module TestCalculator
   end
 
   def num
-    split(',').map(&:to_i)
+    scan(/\d+/).map(&:to_i)
   end
 end
