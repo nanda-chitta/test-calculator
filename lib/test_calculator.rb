@@ -11,6 +11,6 @@ module TestCalculator
   end
 
   def num
-    scan(/\d+/).map(&:to_i)
+    scan(/-?\d+/).map(&:to_i)
   end
 end
