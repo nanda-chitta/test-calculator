@@ -43,5 +43,11 @@ RSpec.describe TestCalculator, type: :module do
         expect('17,8'.add).to eq(25)
       end
     end
+
+    context 'when multiple numbers' do
+      it 'return the sum of the numbers input' do
+        expect('2,5,6'.add).to eq(13)
+      end
+    end
   end
 end
