@@ -64,6 +64,10 @@ RSpec.describe TestCalculator, type: :module do
       it 'return sum of the number'do
         expect("150\n10".add).to eq(160)
       end
+
+      it 'return sum of the string number with "\n" and ","' do
+        expect("12\n52,24".add).to eq(88)
+      end
     end
   end
 end
