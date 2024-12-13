@@ -79,5 +79,11 @@ RSpec.describe TestCalculator, type: :module do
         expect("//abc\n52$32@18%14".add).to eq(116)
       end
     end
+
+    context 'when negative numbers' do
+      it 'should raise an exception for negative number' do
+        expect('-124'.add).to raise_error
+      end
+    end
   end
 end
