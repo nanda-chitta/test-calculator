@@ -69,5 +69,11 @@ RSpec.describe TestCalculator, type: :module do
         expect("12\n52,24".add).to eq(88)
       end
     end
+
+    context 'when custom delimiters' do
+      it 'should allow the semicolon' do
+        expect("//;\n19;12;14".add).to eq(45)
+      end
+    end
   end
 end
