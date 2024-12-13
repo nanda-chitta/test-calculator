@@ -48,6 +48,10 @@ RSpec.describe TestCalculator, type: :module do
       it 'return the sum of the numbers input' do
         expect('12,10,16'.add).to eq(38)
       end
+
+      it 'return the sum of the 3 digit numbers' do
+        expect('300,250,725'.add).to eq(1275)
+      end
     end
   end
 end
