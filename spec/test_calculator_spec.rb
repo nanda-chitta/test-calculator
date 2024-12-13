@@ -38,6 +38,10 @@ RSpec.describe TestCalculator, type: :module do
       it 'return the sum of two number' do
         expect('5,8'.add).to eq(13)
       end
+
+      it 'return the sum of two digits number' do
+        expect('17,8'.add).to eq(25)
+      end
     end
   end
 end
