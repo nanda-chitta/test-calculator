@@ -19,5 +19,11 @@ RSpec.describe TestCalculator, type: :module do
     it 'return for valid string' do
       expect(''.add).to eq(0)
     end
+
+    context 'when single digit' do
+      it 'return the "digit" which provided' do
+        expect('8'.add).to eq(8)
+      end
+    end
   end
 end
