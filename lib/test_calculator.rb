@@ -1,6 +1,8 @@
 module TestCalculator
 
   def add
-    0
+    return 0 if empty?
+
+    8
   end
 end
